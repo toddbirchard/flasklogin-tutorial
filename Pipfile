@@ -5,7 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 Python-Dotenv = "*"
-LESSCpy = "*"
+Lesscpy = "*"
 CSSMin = "*"
 JSMin = "*"
 

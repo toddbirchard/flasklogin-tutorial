@@ -23,6 +23,8 @@ def create_app():
         # Import parts of our application
         from . import routes
         from . import auth
+
+        # Register Blueprints
         app.register_blueprint(routes.main_bp)
         app.register_blueprint(auth.auth_bp)
 
