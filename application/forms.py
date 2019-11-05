@@ -1,6 +1,13 @@
 """Create form logic."""
-from wtforms import Form, StringField, PasswordField, validators, SubmitField
-from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length, Optional
+from wtforms import (Form,
+                     StringField,
+                     PasswordField,
+                     SubmitField)
+from wtforms.validators import (DataRequired,
+                                Email,
+                                EqualTo,
+                                Length,
+                                Optional)
 
 
 class SignupForm(Form):

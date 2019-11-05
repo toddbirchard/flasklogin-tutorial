@@ -10,7 +10,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='flasklogin_tutorial',
+    name='flasklogin-tutorial',
     version='0.0.1',
     description='Example Flask project for implementing Flask-Login.',
     long_description=long_description,
@@ -36,8 +36,8 @@ setup(
                       'flask_sqlalchemy',
                       'flask_assets',
                       'psycopg2-binary',
-                      'wtforms'
-                      ],
+                      'PyMySQL',
+                      'wtforms'],
     extras_require={
         'dev': ['check-manifest'],
         'test': ['coverage'],
@@ -45,7 +45,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            '__main__',
+            'run = __main__',
         ],
     },
     project_urls={

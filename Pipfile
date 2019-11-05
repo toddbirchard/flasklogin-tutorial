@@ -15,6 +15,7 @@ Flask-SQLAlchemy = "*"
 Flask-Login = "*"
 Flask-Assets = "*"
 Psycopg2-Binary = "*"
+PyMySQL = "*"
 WTForms = "*"
 
 [requires]
