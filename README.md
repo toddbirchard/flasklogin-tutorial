@@ -11,9 +11,9 @@
 [![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/flasklogin-tutorial.svg?style=flat-square&colorA=4c566a&logo=GitHub&colorB=ebcb8b)](https://github.com/toddbirchard/flasklogin-tutorial/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/flasklogin-tutorial.svg?style=flat-square&colorA=4c566a&logo=GitHub&colorB=ebcb8b)](https://github.com/toddbirchard/flasklogin-tutorial/network)
 
-Source code for the accompanying tutorial found here: https://hackersandslackers.com/authenticating-users-with-flask-login/
+Source code for the accompanying tutorial found here: https://hackersandslackers.com/flask-login-user-authentication/
 
-![Flask Login](https://github.com/toddbirchard/flasklogin-tutorial/blob/master/application/static/dist/img/flasklogin@2x.jpg)
+![Flask Login](https://storage.googleapis.com/hackersandslackers-cdn/2019/06/flasklogin@2x.jpg)
 
 ## Getting Started
 
@@ -48,9 +48,4 @@ $ flask run
 
 **Hackers and Slackers** tutorials are free of charge. If you found this tutorial helpful, a [small donation](https://www.buymeacoffee.com/hackersslackers) would be greatly appreciated to keep us in business. All proceeds go towards coffee, and all coffee goes towards more content.
 
-
 Remember to ensure that all environment variables in **config.py** are satisfied.
-
------
-
-This theme and all publically-visible repositories are free of charge. If you find this project to be helpful, a [small donation](https://www.buymeacoffee.com/hackersslackers) would be greatly appreciated to keep us in business. All proceeds go towards coffee, and all coffee goes towards improving these projects.
