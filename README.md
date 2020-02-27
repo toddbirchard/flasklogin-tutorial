@@ -13,7 +13,7 @@
 
 Source code for the accompanying tutorial found here: https://hackersandslackers.com/flask-login-user-authentication/
 
-![Flask Login](https://storage.googleapis.com/hackersandslackers-cdn/2019/06/flasklogin@2x.jpg)
+![Flask Login](https://raw.githubusercontent.com/toddbirchard/flasklogin-tutorial/master/flask_login_tutorial/static/dist/img/flasklogin%402x.jpg)
 
 ## Getting Started
 
@@ -44,8 +44,11 @@ $ cd flasklogin-tutorial
 $ python3 setup.py install
 $ flask run
 ```
+
+Remember to ensure that all environment variables in **config.py** are satisfied.
+
 -----
 
 **Hackers and Slackers** tutorials are free of charge. If you found this tutorial helpful, a [small donation](https://www.buymeacoffee.com/hackersslackers) would be greatly appreciated to keep us in business. All proceeds go towards coffee, and all coffee goes towards more content.
 
-Remember to ensure that all environment variables in **config.py** are satisfied.
+
