@@ -13,7 +13,7 @@
 
 Source code for the accompanying tutorial found here: https://hackersandslackers.com/authenticating-users-with-flask-login/
 
-![Flask Login](https://storage.googleapis.com/hackersandslackers-cdn/2019/06/flasklogin@2x.jpg)
+![Flask Login](https://github.com/toddbirchard/flasklogin-tutorial/blob/master/application/static/dist/img/flasklogin@2x.jpg)
 
 ## Getting Started
 
@@ -50,3 +50,7 @@ $ flask run
 
 
 Remember to ensure that all environment variables in **config.py** are satisfied.
+
+-----
+
+This theme and all publically-visible repositories are free of charge. If you find this project to be helpful, a [small donation](https://www.buymeacoffee.com/hackersslackers) would be greatly appreciated to keep us in business. All proceeds go towards coffee, and all coffee goes towards improving these projects.
