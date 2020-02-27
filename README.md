@@ -13,7 +13,7 @@
 
 Source code for the accompanying tutorial found here: https://hackersandslackers.com/flask-login-user-authentication/
 
-![Flask Login](https://storage.googleapis.com/hackersandslackers-cdn/2019/06/flasklogin@2x.jpg)
+![Flask Login](https://raw.githubusercontent.com/toddbirchard/flasklogin-tutorial/master/flask_login_tutorial/static/dist/img/flasklogin%402x.jpg)
 
 ## Getting Started
 
