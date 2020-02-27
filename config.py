@@ -3,7 +3,7 @@ from os import environ
 
 
 class Config:
-    """Set Flask configuration vars from .env file."""
+    """Set Flask configuration vars from environment variables."""
 
     # General Config
     SECRET_KEY = environ.get('SECRET_KEY')
