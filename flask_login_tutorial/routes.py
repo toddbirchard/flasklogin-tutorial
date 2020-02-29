@@ -1,9 +1,9 @@
-"""Logged-in pages."""
-from flask import Blueprint, render_template
+"""Logged-in page routes."""
+from flask import Blueprint, render_template, redirect, url_for
 from flask_login import current_user
 from flask import current_app as app
 from .assets import compile_auth_assets
-from flask_login import login_required
+from flask_login import login_required, logout_user
 
 
 # Blueprint Configuration
@@ -22,3 +22,11 @@ def dashboard():
                            template='dashboard-template',
                            current_user=current_user,
                            body="You are now logged in!")
+
+
+@main_bp.route("/logout")
+@login_required
+def logout():
+    """User log-out logic."""
+    logout_user()
+    return redirect(url_for('auth_bp.login'))

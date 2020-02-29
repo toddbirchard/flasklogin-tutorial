@@ -22,7 +22,7 @@ flask_sqlalchemy = "*"
 flask_login = "*"
 flask_assets = "*"
 pymysql = "*"
-wtforms = "*"
+flask_wtf = "*"
 
 [tool.poetry.dev-dependencies]
 python-dotenv = "*"

@@ -15,7 +15,7 @@ Flask-SQLAlchemy = "*"
 Flask-Login = "*"
 Flask-Assets = "*"
 PyMySQL = "*"
-WTForms = "*"
+Flask-WTF = "*"
 
 [requires]
 python_version = "3.7"
