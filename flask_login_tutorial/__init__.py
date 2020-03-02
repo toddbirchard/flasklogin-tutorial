@@ -9,7 +9,7 @@ login_manager = LoginManager()
 
 
 def create_app():
-    """Construct the core flask_login_tutorial."""
+    """Construct the core app object."""
     app = Flask(__name__, instance_relative_config=False)
 
     # Application Configuration
@@ -20,7 +20,6 @@ def create_app():
     login_manager.init_app(app)
 
     with app.app_context():
-        # Import parts of our flask_login_tutorial
         from . import routes
         from . import auth
 
