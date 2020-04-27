@@ -8,7 +8,6 @@ class User(UserMixin, db.Model):
     """User account model."""
 
     __tablename__ = 'flasklogin-users'
-
     id = db.Column(db.Integer,
                    primary_key=True)
     name = db.Column(db.String(100),

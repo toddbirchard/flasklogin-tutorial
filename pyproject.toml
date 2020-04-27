@@ -16,16 +16,17 @@ keywords = ["Flask",
             "User Accounts"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 flask = "*"
 flask_sqlalchemy = "*"
 flask_login = "*"
 flask_assets = "*"
 pymysql = "*"
 flask_wtf = "*"
+python-dotenv = "*"
+email_validator = "*"
 
 [tool.poetry.dev-dependencies]
-python-dotenv = "*"
 lesscpy = "*"
 cssmin = "*"
 jsmin = "*"

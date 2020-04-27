@@ -36,12 +36,12 @@ $ poetry install
 $ poetry run
 ```
 
-Alternatively, try installing via `setup.py`:
+Alternatively, try installing via `requirements.txt`:
 
 ```shell
 $ git clone https://github.com/hackersandslackers/flasklogin-tutorial.git
 $ cd flasklogin-tutorial
-$ python3 setup.py install
+$ python3 -m pip install -r requirements.txt
 $ flask run
 ```
 
