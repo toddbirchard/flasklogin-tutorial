@@ -6,11 +6,11 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{body}}</h1>
+  <h1>{{ body }}</h1>
 
-    {% if current_user.is_authenticated %}
-        <p>Hi {{ current_user.name }}!</p>
-        <a href="{{ url_for('main_bp.logout') }}">Log out</a>
-    {% endif %}
+  {% if current_user.is_authenticated %}
+    <p>Hi {{ current_user.name }}!</p>
+    <a href="{{ url_for('main_bp.logout') }}">Log out</a>
+  {% endif %}
 
 {% endblock %}
