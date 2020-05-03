@@ -23,16 +23,12 @@ def signup():
     form = SignupForm()
     if request.method == 'POST':
         if form.validate_on_submit():
-            name = form.name.data
-            email = form.email.data
-            password = form.password.data
-            website = form.website.data
-            existing_user = User.query.filter_by(email=email).first()  # Check if user exists
+            existing_user = User.query.filter_by(email=form.email.data).first()  # Check if user exists
             if existing_user is None:
-                user = User(name=name,
-                            email=email,
-                            website=website)
-                user.set_password(password)
+                user = User(name=form.name.data,
+                            email=form.email.data,
+                            website=form.website.data)
+                user.set_password(form.password.data)
                 db.session.add(user)
                 db.session.commit()  # Create new user
                 login_user(user)  # Log in as newly created user
@@ -59,10 +55,8 @@ def login():
     form = LoginForm()
     if request.method == 'POST':
         if form.validate_on_submit():
-            email = form.email.data
-            password = form.password.data
-            user = User.query.filter_by(email=email).first()  # Validate Login Attempt
-            if user and user.check_password(password=password):
+            user = User.query.filter_by(email=form.email.data).first()  # Validate Login Attempt
+            if user and user.check_password(password=form.password.data):
                 login_user(user)
                 next_page = request.args.get('next')
                 return redirect(next_page or url_for('main_bp.dashboard'))
