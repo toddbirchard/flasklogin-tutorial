@@ -1,7 +1,6 @@
 """Routes for user authentication."""
 from flask import redirect, render_template, flash, Blueprint, request, url_for
 from flask_login import current_user, login_user
-from flask import current_app as app
 from .forms import LoginForm, SignupForm
 from .models import db, User
 from .import login_manager
