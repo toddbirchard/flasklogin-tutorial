@@ -1,11 +1,11 @@
-"""Sign0up & log-in forms."""
+"""Sign-up & log-in forms."""
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, EqualTo, Length, Optional
 
 
 class SignupForm(FlaskForm):
-    """User Signup Form."""
+    """User Sign-up Form."""
     name = StringField('Name',
                        validators=[DataRequired()])
     email = StringField('Email',
@@ -24,7 +24,7 @@ class SignupForm(FlaskForm):
 
 
 class LoginForm(FlaskForm):
-    """User Login Form."""
+    """User Log-in Form."""
     email = StringField('Email', validators=[DataRequired(),
                                              Email(message='Enter a valid email.')])
     password = PasswordField('Password', validators=[DataRequired()])
