@@ -22,6 +22,7 @@ def create_app():
     with app.app_context():
         from . import routes
         from . import auth
+        from .assets import compile_assets
 
         # Register Blueprints
         app.register_blueprint(routes.main_bp)
@@ -29,5 +30,9 @@ def create_app():
 
         # Create Database Models
         db.create_all()
+
+        # Compile static assets
+        if app.config['FLASK_ENV'] == 'development':
+            compile_assets(app)
 
         return app

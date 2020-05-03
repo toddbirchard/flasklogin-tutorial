@@ -1,19 +1,13 @@
 """Logged-in page routes."""
 from flask import Blueprint, render_template, redirect, url_for
-from flask_login import current_user
+from flask_login import current_user, login_required, logout_user
 from flask import current_app as app
-from .assets import compile_auth_assets
-from flask_login import login_required, logout_user
 
 
 # Blueprint Configuration
 main_bp = Blueprint('main_bp', __name__,
                     template_folder='templates',
                     static_folder='static')
-
-# Compile CSS
-if app.config['FLASK_ENV'] == 'development':
-    compile_auth_assets(app)
 
 
 @main_bp.route('/', methods=['GET'])

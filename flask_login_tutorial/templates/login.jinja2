@@ -6,7 +6,8 @@
 
 {% block content %}
   <div class="formwrapper">
-    <form method="POST">
+    <form method="POST" action="/login">
+      {{ form.csrf_token }}
 
       <div class="logo">
         <img src="{{ url_for('static', filename='dist/img/logo.png') }}">
@@ -42,13 +43,13 @@
       </fieldset>
 
       <div class="submitbutton">
-        <input id="submit" type="submit" value="Submit">
+        {{ form.submit }}
       </div>
 
       <div class="loginsignup">
         <span>Don't have an account? <a href="{{ url_for('auth_bp.signup') }}">Sign up.</a></span>
         </div>
-        
+
     </form>
   </div>
 {% endblock %}

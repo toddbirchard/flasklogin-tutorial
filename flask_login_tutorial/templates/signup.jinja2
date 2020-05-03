@@ -6,7 +6,8 @@
 
 {% block content %}
   <div class="formwrapper">
-    <form method="POST">
+    <form method="POST" action="/signup">
+      {{ form.csrf_token }}
 
       <div class="logo">
         <img src="{{ url_for('static', filename='dist/img/logo.png') }}">
@@ -67,7 +68,7 @@
       </fieldset>
 
       <div class="submitbutton">
-        <input id="submit" type="submit" value="Submit">
+        {{ form.submit }}
       </div>
 
     </form>
