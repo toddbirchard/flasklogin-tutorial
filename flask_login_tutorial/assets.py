@@ -1,7 +1,8 @@
+"""Create and bundle CSS and JS files."""
 from flask_assets import Environment, Bundle
 
 
-def compile_assets(app):
+def compile_static_assets(app):
     """Configure static asset bundles."""
     assets = Environment(app)
     Environment.auto_build = True

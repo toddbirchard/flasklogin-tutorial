@@ -1,4 +1,4 @@
-"""App configuration."""
+"""Flask app configuration."""
 from os import environ, path
 from dotenv import load_dotenv
 
@@ -9,7 +9,6 @@ load_dotenv(path.join(basedir, '.env'))
 class Config:
     """Set Flask configuration from environment variables."""
 
-    # General Config
     FLASK_APP = 'wsgi.py'
     FLASK_ENV = environ.get('FLASK_ENV')
     SECRET_KEY = environ.get('SECRET_KEY')

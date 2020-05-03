@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{{title}}</title>
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#5eb9d7" />
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>{{ title }}</title>
+    <meta name="description" content="Add user authentication to your Flask app."/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <meta name="theme-color" content="#5eb9d7"/>
     <link rel="shortcut icon" href="{{ url_for('static', filename='dist/img/favicon.png') }}" type="image/x-icon"/>
-    {% block pagestyles %}{% endblock %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <meta property="og:site_name" content="Hackers and Slackers"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Hackers and Slackers - Hackers and Slackers"/>
+    <meta property="og:description" content="Add user authentication to your Flask app." />
+    <meta property="og:url" content="https://flasklogin.hackersandslackers.app/"/>
+    <meta name="twitter:title" content="{{ title }}"/>
+    <meta name="twitter:description" content="Add user authentication to your Flask app." />
+    <meta name="twitter:url" content="https://flasklogin.hackersandslackers.app/"/>
+    <meta name="twitter:site" content="@hackersslackers"/>
+    <meta name="twitter:creator" content="@toddrbirchard"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content=" https://storage.googleapis.com/hackersandslackers-cdn/2019/06/flasklogin@2x.jpg" />
+    <meta property="og:image" content=" https://storage.googleapis.com/hackersandslackers-cdn/2019/06/flasklogin@2x.jpg" />
+    <meta property="og:image:width" content="1000"/>
+    <meta property="og:image:height" content="523"/>
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,500" rel="stylesheet"/>
-  </head>
+    {% block pagestyles %}{% endblock %}
+</head>
 
-  <body class="{{template}}">
-    <div class="container">
-      {% block content %}{% endblock %}
-    </div>
-    <script src="{{ url_for('static', filename='dist/js/main.min.js') }}"></script>
-    {% block additionalscripts %}{% endblock %}
-  </body>
+<body class="{{ template }}">
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+<script src="{{ url_for('static', filename='dist/js/main.min.js') }}"></script>
+{% block additionalscripts %}{% endblock %}
+</body>
 
 </html>

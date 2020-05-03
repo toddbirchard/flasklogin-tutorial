@@ -15,15 +15,15 @@ auth_bp = Blueprint('auth_bp', __name__,
 @auth_bp.route('/signup', methods=['GET', 'POST'])
 def signup():
     """
-    User sign-up page.
+    Sign-up form to create new user accounts.
 
     GET: Serve sign-up page.
-    POST: If submitted credentials are valid, redirect user to the logged-in homepage.
+    POST: Validate submission, create account, and redirect user to dashboard.
     """
     form = SignupForm()
     if request.method == 'POST':
         if form.validate_on_submit():
-            existing_user = User.query.filter_by(email=form.email.data).first()  # Check if user exists
+            existing_user = User.query.filter_by(email=form.email.data).first()
             if existing_user is None:
                 user = User(name=form.name.data,
                             email=form.email.data,
@@ -44,10 +44,10 @@ def signup():
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
     """
-    User login page.
+    Log-in page for registered users.
 
     GET: Serve Log-in page.
-    POST: If form is valid and new user creation succeeds, redirect user to the logged-in homepage.
+    POST: Validate submission and redirect user to dashboard.
     """
     if current_user.is_authenticated:
         return redirect(url_for('main_bp.dashboard'))  # Bypass if user is logged in
@@ -71,7 +71,7 @@ def login():
 
 @login_manager.user_loader
 def load_user(user_id):
-    """Check if user is logged-in on every page load."""
+    """Check if user is logged-in upon page load."""
     if user_id is not None:
         return User.query.get(user_id)
     return None

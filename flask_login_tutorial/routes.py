@@ -12,7 +12,7 @@ main_bp = Blueprint('main_bp', __name__,
 @main_bp.route('/', methods=['GET'])
 @login_required
 def dashboard():
-    """Serve logged-in Dashboard."""
+    """Logged-in User Dashboard."""
     return render_template('dashboard.jinja2',
                            title='Flask-Login Tutorial.',
                            template='dashboard-template',

@@ -1,4 +1,4 @@
-"""Signup & login forms."""
+"""Sign0up & log-in forms."""
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, EqualTo, Length, Optional
