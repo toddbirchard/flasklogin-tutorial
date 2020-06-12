@@ -1,6 +1,6 @@
 # Flask-Login Tutorial
 
-![Python](https://img.shields.io/badge/Python-v3.8-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
+![Python](https://img.shields.io/badge/Python-v^3.8-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
 ![Flask](https://img.shields.io/badge/Flask-v1.1.2-blue.svg?longCache=true&logo=flask&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![Flask-Login](https://img.shields.io/badge/Flask--Login-v0.5.0-blue.svg?longCache=true&logo=flask&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![Flask-Assets](https://img.shields.io/badge/Flask--Assets-v2.0-blue.svg?longCache=true&logo=flask&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
@@ -38,15 +38,21 @@ $ pipenv update
 $ flask run
 ```
 
-## Configuration
+## Usage
 
-Configuration is handled by creating a **.env** file. This should contain the following variables (replace the values with your own):
+Replace the values in **.env.example** with your values and rename this file to **.env**:
 
-```.env
-FLASK_ENV="production"
-SECRET_KEY="YOURSECRETKEY"
-SQLALCHEMY_DATABASE_URI="mysql+pymysql://[USER]:[PASSWORD]@[HOST]:[PORT]/[DATABASE_NAME]"
-```
+* `FLASK_APP`: Entry point of your application (should be `wsgi.py`).
+* `FLASK_ENV`: The environment to run your app in (either `development` or `production`).
+* `SECRET_KEY`: Randomly generated string of characters used to encrypt your app's data.
+* `SQLALCHEMY_DATABASE_URI`: Connection URI of a SQL database.
+* `LESS_BIN`: Path to your local LESS installation via `which lessc` (optional for static assets).
+* `ASSETS_DEBUG`: Debug asset creation and bundling in `development` (optional).
+* `LESS_RUN_IN_DEBUG`: Debug LESS while in `development` (optional).
+* `COMPRESSOR_DEBUG`: Debug asset compression while in `development` (optional).
+
+
+*Remember never to commit secrets saved in .env files to Github.*
 
 -----
 
