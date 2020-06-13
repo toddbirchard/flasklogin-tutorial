@@ -17,10 +17,10 @@ auth_bp = Blueprint(
 @auth_bp.route('/signup', methods=['GET', 'POST'])
 def signup():
     """
-    Sign-up form to create new user accounts.
+    User sign-up page.
 
-    GET: Serve sign-up page.
-    POST: Validate form, create account, redirect user to dashboard.
+    GET requests serve sign-up page.
+    POST requests validate form & user creation.
     """
     form = SignupForm()
     if form.validate_on_submit():
@@ -51,15 +51,17 @@ def login():
     """
     Log-in page for registered users.
 
-    GET: Serve Log-in page.
-    POST: Validate form and redirect user to dashboard.
+    GET requests serve Log-in page.
+    POST requests validate and redirect user to dashboard.
     """
+    # Bypass if user is logged in
     if current_user.is_authenticated:
-        return redirect(url_for('main_bp.dashboard'))  # Bypass if user is logged in
+        return redirect(url_for('main_bp.dashboard'))  
 
     form = LoginForm()
+    # Validate login attempt
     if form.validate_on_submit():
-        user = User.query.filter_by(email=form.email.data).first()  # Validate Login Attempt
+        user = User.query.filter_by(email=form.email.data).first()  
         if user and user.check_password(password=form.password.data):
             login_user(user)
             next_page = request.args.get('next')
