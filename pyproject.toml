@@ -9,11 +9,13 @@ readme = "README.md"
 homepage = "https://hackersandslackers.com/flask-login-user-authentication/"
 repository = "https://github.com/toddbirchard/flasklogin-tutorial/"
 documentation = "https://hackersandslackers.com/flask-login-user-authentication/"
-keywords = ["Flask",
-            "Flask-Login",
-            "Authentication",
-            "Sessions",
-            "User Accounts"]
+keywords = [
+    "Flask",
+    "Flask-Login",
+    "Authentication",
+    "Users",
+    "Accounts"
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -25,6 +27,7 @@ pymysql = "*"
 flask_wtf = "*"
 python-dotenv = "*"
 email_validator = "*"
+uWSGI = "^2.0.19"
 
 [tool.poetry.dev-dependencies]
 lesscpy = "*"

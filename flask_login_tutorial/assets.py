@@ -1,5 +1,5 @@
 """Create and bundle CSS and JS files."""
-from flask_assets import Environment, Bundle
+from flask_assets import Bundle, Environment
 
 
 def compile_static_assets(app):
@@ -11,13 +11,13 @@ def compile_static_assets(app):
     account_less_bundle = Bundle(
         'src/less/account.less',
         filters='less,cssmin',
-        output=f'dist/css/account.css',
+        output='dist/css/account.css',
         extra={'rel': 'stylesheet/less'}
     )
     dashboard_less_bundle = Bundle(
         'src/less/dashboard.less',
         filters='less,cssmin',
-        output=f'dist/css/dashboard.css',
+        output='dist/css/dashboard.css',
         extra={'rel': 'stylesheet/less'}
     )
     # JavaScript Bundle

@@ -1,10 +1,10 @@
 """Routes for user authentication."""
-from flask import redirect, render_template, flash, Blueprint, request, url_for
+from flask import Blueprint, flash, redirect, render_template, request, url_for
 from flask_login import current_user, login_user
-from .forms import LoginForm, SignupForm
-from .models import db, User
-from .import login_manager
 
+from . import login_manager
+from .forms import LoginForm, SignupForm
+from .models import User, db
 
 # Blueprint Configuration
 auth_bp = Blueprint(
