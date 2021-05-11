@@ -31,7 +31,7 @@ $ flask run
 **Installation via [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/)**:
 
 ```shell
-$ git clone https://github.com/hackersandslackers/flasklogin-tutorial.git
+$ git clone https://github.com/toddbirchard/flasklogin-tutorial.git
 $ cd flasklogin-tutorial
 $ pipenv shell
 $ pipenv update
@@ -41,7 +41,7 @@ $ flask run
 **Installation via [Poetry](https://python-poetry.org/)**:
 
 ```shell
-$ git clone https://github.com/hackersandslackers/flasklogin-tutorial.git
+$ git clone https://github.com/toddbirchard/flasklogin-tutorial.git
 $ cd flasklogin-tutorial
 $ poetry shell
 $ poetry update
