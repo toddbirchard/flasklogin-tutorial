@@ -20,7 +20,7 @@ Add user authentication to your Flask app. Tutorial found here: https://hackersa
 **Installation via `requirements.txt`**:
 
 ```shell
-$ git clone https://github.com/hackersandslackers/flasklogin-tutorial.git
+$ git clone https://github.com/toddbirchard/flasklogin-tutorial.git
 $ cd flasklogin-tutorial
 $ python3 -m venv myenv
 $ source myenv/bin/activate
