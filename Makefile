@@ -32,7 +32,7 @@ all help:
 
 .PHONY: run
 run: env
-	python3 main.py
+	flask run
 
 
 .PHONY: install
