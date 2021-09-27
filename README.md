@@ -15,40 +15,11 @@ Add user authentication to your Flask app. Tutorial found here: https://hackersa
 
 ![Flask Login](https://raw.githubusercontent.com/toddbirchard/flasklogin-tutorial/master/flask_login_tutorial/static/dist/img/flasklogin%402x.jpg)
 
-## Installation
+## Getting Started
 
-**Installation via `requirements.txt`**:
+Get set up locally in two steps:
 
-```shell
-$ git clone https://github.com/toddbirchard/flasklogin-tutorial.git
-$ cd flasklogin-tutorial
-$ python3 -m venv myenv
-$ source myenv/bin/activate
-$ pip3 install -r requirements.txt
-$ flask run
-```
-
-**Installation via [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/)**:
-
-```shell
-$ git clone https://github.com/toddbirchard/flasklogin-tutorial.git
-$ cd flasklogin-tutorial
-$ pipenv shell
-$ pipenv update
-$ flask run
-```
-
-**Installation via [Poetry](https://python-poetry.org/)**:
-
-```shell
-$ git clone https://github.com/toddbirchard/flasklogin-tutorial.git
-$ cd flasklogin-tutorial
-$ poetry shell
-$ poetry update
-$ poetry run
-```
-
-## Usage
+### I. Environment Variables
 
 Replace the values in **.env.example** with your values and rename this file to **.env**:
 
@@ -61,8 +32,17 @@ Replace the values in **.env.example** with your values and rename this file to 
 * `LESS_RUN_IN_DEBUG`: Debug LESS while in `development` (optional).
 * `COMPRESSOR_DEBUG`: Debug asset compression while in `development` (optional).
 
-
 *Remember never to commit secrets saved in .env files to Github.*
+
+### II. Installation
+
+Get up and running with `make deploy`:
+
+```shell
+$ git clone https://github.com/toddbirchard/flasklogin-tutorial.git
+$ cd flasklogin-tutorial
+$ make deploy
+``` 
 
 -----
 
