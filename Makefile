@@ -85,3 +85,4 @@ clean:
 	find . -wholename './logs/*.json' -delete
 	find . -wholename './logs' -delete
 	find . -wholename '*.html' -delete
+	find . -wholename '**/.webassets-cache'  -delete

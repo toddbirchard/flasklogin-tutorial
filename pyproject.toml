@@ -18,8 +18,7 @@ keywords = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.8"
-flask = "*"
+python = "^3.9"
 flask_sqlalchemy = "*"
 flask_login = "*"
 flask_assets = "*"
@@ -27,16 +26,19 @@ pymysql = "*"
 flask_wtf = "*"
 python-dotenv = "*"
 email_validator = "*"
-uWSGI = "^2.0.19"
-ddtrace = "^0.55.0"
+uWSGI = "^2.0.20"
+Flask = "^2.0.2"
+lessc = "^0.1.3"
 
 [tool.poetry.dev-dependencies]
 lesscpy = "*"
 cssmin = "*"
 jsmin = "*"
+isort = "^5.10.1"
+black = "^22.1.0"
 
 [build-system]
-requires = ["poetry>=0.12"]
+requires = ["poetry>=1.1.12"]
 build-backend = "poetry.masonry.api"
 
 [tool.poetry.scripts]
