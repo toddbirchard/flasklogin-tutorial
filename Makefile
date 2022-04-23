@@ -12,6 +12,7 @@ make update     - Update pip dependencies via Poetry and export output to requir
 make format     - Format code with Pythons `Black` library.
 make lint       - Check code formatting with `flake8`.
 make clean      - Remove cached files and lock files.
+
 endef
 export HELP
 
