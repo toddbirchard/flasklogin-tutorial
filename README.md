@@ -1,8 +1,8 @@
 # Flask-Login Tutorial
 
 ![Python](https://img.shields.io/badge/Python-v^3.9-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
-![Flask](https://img.shields.io/badge/Flask-v2.0.2-blue.svg?longCache=true&logo=flask&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
-![Flask-Login](https://img.shields.io/badge/Flask--Login-v0.5.0-blue.svg?longCache=true&logo=flask&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
+![Flask](https://img.shields.io/badge/Flask-v2.1.1-blue.svg?longCache=true&logo=flask&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
+![Flask-Login](https://img.shields.io/badge/Flask--Login-v0.6.0-blue.svg?longCache=true&logo=flask&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![Flask-Assets](https://img.shields.io/badge/Flask--Assets-v2.0-blue.svg?longCache=true&logo=flask&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![Flask-WTF](https://img.shields.io/badge/Flask--WTF-v1.0.0-blue.svg?longCache=true&logo=python&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![Flask-SQLAlchemy](https://img.shields.io/badge/Flask--SQLAlchemy-v2.5.1-red.svg?longCache=true&style=flat-square&logo=scala&logoColor=white&colorA=4c566a&colorB=bf616a)
@@ -11,9 +11,12 @@
 [![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/flasklogin-tutorial.svg?style=flat-square&colorA=4c566a&logo=GitHub&colorB=ebcb8b)](https://github.com/toddbirchard/flasklogin-tutorial/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/flasklogin-tutorial.svg?style=flat-square&colorA=4c566a&logo=GitHub&colorB=ebcb8b)](https://github.com/toddbirchard/flasklogin-tutorial/network)
 
-Add user authentication to your Flask app. Tutorial found here: https://hackersandslackers.com/flask-login-user-authentication/
-
 ![Flask Login](https://raw.githubusercontent.com/toddbirchard/flasklogin-tutorial/master/flask_login_tutorial/static/dist/img/flasklogin%402x.jpg)
+
+Add user authentication to your Flask app.
+
+* **Tutorial**: https://hackersandslackers.com/flask-login-user-authentication/
+* **Demo**: https://flasklogin.hackersandslackers.app
 
 ## Getting Started
 
