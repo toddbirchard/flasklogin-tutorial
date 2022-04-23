@@ -26,16 +26,16 @@ pymysql = "*"
 flask_wtf = "*"
 python-dotenv = "*"
 email_validator = "*"
-uWSGI = "^2.0.20"
-Flask = "^2.0.2"
+uWSGI = "*"
+Flask = "*"
 lessc = "^0.1.3"
 
 [tool.poetry.dev-dependencies]
 lesscpy = "*"
 cssmin = "*"
 jsmin = "*"
-isort = "^5.10.1"
-black = "^22.1.0"
+isort = "*"
+black = "*"
 
 [build-system]
 requires = ["poetry>=1.1.12"]
