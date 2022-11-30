@@ -42,9 +42,9 @@ Replace the values in **.env.example** with your values and rename this file to 
 Get up and running with `make deploy`:
 
 ```shell
-$ git clone https://github.com/toddbirchard/flasklogin-tutorial.git
-$ cd flasklogin-tutorial
-$ make deploy
+git clone https://github.com/toddbirchard/flasklogin-tutorial.git
+cd flasklogin-tutorial
+make deploy
 ``` 
 
 -----
