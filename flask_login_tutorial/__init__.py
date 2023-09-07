@@ -28,7 +28,7 @@ def create_app():
         db.create_all()
 
         # Compile static assets
-        if app.config["FLASK_ENV"] == "development":
+        if app.config["ENVIRONMENT"] == "development":
             compile_static_assets(app)
 
         return app

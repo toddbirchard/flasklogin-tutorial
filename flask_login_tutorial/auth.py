@@ -7,9 +7,7 @@ from .forms import LoginForm, SignupForm
 from .models import User, db
 
 # Blueprint Configuration
-auth_bp = Blueprint(
-    "auth_bp", __name__, template_folder="templates", static_folder="static"
-)
+auth_bp = Blueprint("auth_bp", __name__, template_folder="templates", static_folder="static")
 
 
 @auth_bp.route("/signup", methods=["GET", "POST"])
@@ -24,9 +22,7 @@ def signup():
     if form.validate_on_submit():
         existing_user = User.query.filter_by(email=form.email.data).first()
         if existing_user is None:
-            user = User(
-                name=form.name.data, email=form.email.data, website=form.website.data
-            )
+            user = User(name=form.name.data, email=form.email.data, website=form.website.data)
             user.set_password(form.password.data)
             db.session.add(user)
             db.session.commit()  # Create new user
@@ -53,7 +49,6 @@ def login():
     # Bypass if user is logged in
     if current_user.is_authenticated:
         return redirect(url_for("main_bp.dashboard"))
-
     form = LoginForm()
     # Validate login attempt
     if form.validate_on_submit():

@@ -3,15 +3,17 @@ from os import environ, path
 
 from dotenv import load_dotenv
 
-basedir = path.abspath(path.dirname(__file__))
-load_dotenv(path.join(basedir, ".env"))
+BASE_DIR = path.abspath(path.dirname(__file__))
+load_dotenv(path.join(BASE_DIR, ".env"))
 
 
 class Config:
     """Set Flask configuration from environment variables."""
 
+    # General Config
+    ENVIRONMENT = environ.get("ENVIRONMENT")
     FLASK_APP = environ.get("FLASK_APP")
-    FLASK_ENV = environ.get("FLASK_ENV")
+    FLASK_DEBUG = environ.get("FLASK_DEBUG")
     SECRET_KEY = environ.get("SECRET_KEY")
 
     # Flask-SQLAlchemy
