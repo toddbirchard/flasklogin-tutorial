@@ -77,7 +77,6 @@ lint: env
 
 .PHONY: clean
 clean:
-	find . -name 'poetry.lock' -delete && \
 	find . -name '.coverage' -delete && \
 	find . -name '*.pyc' -delete \
 	find . -name '__pycache__' -delete \
