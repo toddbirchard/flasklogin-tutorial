@@ -91,4 +91,4 @@ clean:
 	find . -type d -wholename '**/.pytest_cache' -exec rm -rf {} + && \
 	find . -type d -wholename '**/*.log' -exec rm -rf {} + && \
 	find . -type d -wholename './.reports/*' -exec rm -rf {} + && \
-	find . -type d -wholename '**/.webassets-cache' -exec rm -rf {} +
+	find . -type d -wholename '**/.webassets-cache' -exec rm -rf {}

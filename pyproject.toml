@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "flask_login_tutorial"
-version = "0.1.1"
+version = "0.1.2"
 description = "Tutorial for building user-based Flask applications"
-authors = ["Todd Birchard <toddbirchard@gmail.com>"]
-maintainers = ["Todd Birchard <toddbirchard@gmail.com>"]
+authors = ["Todd Birchard <todd@hackersandslackers.com>"]
+maintainers = ["Todd Birchard <todd@hackersandslackers.com>"]
 license = "MIT"
 readme = "README.md"
 homepage = "https://hackersandslackers.com/flask-login-user-authentication/"
