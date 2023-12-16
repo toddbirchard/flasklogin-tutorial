@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "flask_login_tutorial"
 version = "0.1.2"
-description = "Tutorial for building user-based Flask applications"
+description = "Tutorial for building Flask applications with user authorization & login."
 authors = ["Todd Birchard <todd@hackersandslackers.com>"]
 maintainers = ["Todd Birchard <todd@hackersandslackers.com>"]
 license = "MIT"
@@ -13,6 +13,7 @@ keywords = ["Flask", "Flask-Login", "Authentication", "Users", "Accounts"]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
+flask = "*"
 flask_sqlalchemy = "*"
 flask_login = "*"
 flask_assets = "*"
@@ -20,22 +21,20 @@ pymysql = "*"
 flask_wtf = "*"
 python-dotenv = "*"
 email_validator = "*"
-uWSGI = "*"
-Flask = "*"
-lessc = "*"
 lesscpy = "*"
 cssmin = "*"
 jsmin = "*"
 isort = "*"
 black = "*"
-flake8 = "^6.1.0"
+flake8 = "*"
+gunicorn = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.masonry.api"
 
 [tool.poetry.scripts]
-run = "main:app"
+run = "wsgi:app"
 
 [tool.poetry.urls]
 issues = "https://github.com/toddbirchard/flasklogin-tutorial/issues"
@@ -44,6 +43,11 @@ issues = "https://github.com/toddbirchard/flasklogin-tutorial/issues"
 line-length = 120
 target-version = ['py310']
 src_paths = ["flask_login_tutorial", "config", "main"]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+src_paths = ["flask_login_tutorial", "config", "wsgi"]
 
 [tool.pylint.'MESSAGES CONTROL']
 disable = "C0103,C0301,W0703,W0621"

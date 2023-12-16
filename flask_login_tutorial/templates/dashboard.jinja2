@@ -10,7 +10,7 @@
 
   {% if current_user.is_authenticated %}
     <p>Hi {{ current_user.name }}!</p>
-    <a href="{{ url_for('main_bp.logout') }}">Log out</a>
+    <a href="{{ url_for('main_blueprint.logout') }}">Log out</a>
   {% endif %}
 
 {% endblock %}
