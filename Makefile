@@ -32,8 +32,7 @@ $(VIRTUAL_ENV):
 
 .PHONY: run
 run: env
-	export LESS_BIN=$(shell which lessc) && \
-	$(LOCAL_PYTHON) -m main
+	$(LOCAL_PYTHON) -m gunicorn -w 4 wsgi:app
 
 .PHONY: install
 install: env
@@ -78,11 +77,11 @@ lint: env
 .PHONY: clean
 clean:
 	find . -name '.coverage' -delete && \
-	find . -name '*.pyc' -delete \
-	find . -name '__pycache__' -delete \
-	find . -name 'poetry.lock' -delete \
-	find . -name '*.log' -delete \
-	find . -name '.DS_Store' -delete \
+	find . -name '*.pyc' -delete && \
+	find . -name '__pycache__' -delete && \
+	find . -name 'poetry.lock' -delete && \
+	find . -name '*.log' -delete && \
+	find . -name '.DS_Store' -delete && \
 	find . -wholename '**/*.pyc' -delete && \
 	find . -wholename '**/*.html' -delete && \
 	find . -type d -wholename '__pycache__' -exec rm -rf {} + && \
@@ -91,4 +90,4 @@ clean:
 	find . -type d -wholename '**/.pytest_cache' -exec rm -rf {} + && \
 	find . -type d -wholename '**/*.log' -exec rm -rf {} + && \
 	find . -type d -wholename './.reports/*' -exec rm -rf {} + && \
-	find . -type d -wholename '**/.webassets-cache' -exec rm -rf {}
+	find . -type d -wholename '**/.webassets-cache' -exec rm -rf {} +

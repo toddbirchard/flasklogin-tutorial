@@ -8,7 +8,7 @@
   <div class="form-wrapper">
 
     <div class="logo">
-      <img src="{{ url_for('static', filename='dist/img/logo.png') }}" alt="logo"/>
+      <img src="{{ url_for('static', filename='dist/img/logo@2x.png') }}" alt="logo"/>
     </div>
 
     {% for message in get_flashed_messages() %}
@@ -50,7 +50,7 @@
       </div>
 
       <div class="login-signup">
-        <span>Don't have an account? <a href="{{ url_for('auth_bp.signup') }}">Sign up.</a></span>
+        <span>Don't have an account? <a href="{{ url_for('auth_blueprint.signup') }}">Sign up.</a></span>
       </div>
 
     </form>

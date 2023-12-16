@@ -8,7 +8,7 @@ login_manager = LoginManager()
 
 
 def create_app():
-    """Construct the core app object."""
+    """Construct application object."""
     app = Flask(__name__, instance_relative_config=False)
     app.config.from_object("config.Config")
 
@@ -21,8 +21,8 @@ def create_app():
         from .assets import compile_static_assets
 
         # Register Blueprints
-        app.register_blueprint(routes.main_bp)
-        app.register_blueprint(auth.auth_bp)
+        app.register_blueprint(routes.main_blueprint)
+        app.register_blueprint(auth.auth_blueprint)
 
         # Create Database Models
         db.create_all()

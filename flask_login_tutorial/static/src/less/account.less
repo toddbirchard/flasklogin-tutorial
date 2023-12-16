@@ -3,6 +3,10 @@
 .signup-page,
 .login-page {
   background: @background-color;
+  @media (max-width: 600px) {
+    width: 100%;
+    margin: 0;
+  }
 
   .form-wrapper {
     background: white;
@@ -13,9 +17,10 @@
     padding: 50px;
 
     @media (max-width: 600px) {
-      width: 100%;
-      margin: 15px auto;
-      padding: 30px;
+      width: auto;
+      margin: 0;
+      padding: 30px 10vw;
+      max-width: unset;
     }
 
     .logo {
@@ -23,21 +28,17 @@
       margin: 0 auto 20px;
 
       img {
-        width: 30px;
+        width: 50px;
         margin: auto;
-
-        @media (max-width: 600px) {
-          width: 25px;
-        }
       }
     }
 
     .alert-warning {
-      color: #856404;
-      background-color: #fff3cd;
-      border-color: #ffeeba;
+      color: @alert-warning-text-color;
+      background-color: @alert-warning-bg-color;
+      border-color: @alert-warning-border-color;
       font-weight: 300;
-      font-size: .8em;
+      font-size: 1em;
       margin: 30px 0;
       display: flex;
       align-items: center;
@@ -47,7 +48,7 @@
       }
 
       .close {
-        color: #856404;
+        color: @alert-warning-text-color;
         font-weight: 300;
         order: 1;
         outline: none !important;
@@ -83,7 +84,7 @@
     }
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.9em;
       color: @header-color;
       font-weight: 300;
       border-bottom: 1px solid #dee2ef;
@@ -103,16 +104,16 @@
       width: -webkit-fill-available;
       width: -moz-available;
       border-radius: 2px;
-      border: 1px solid #d4d9e3;
+      border: 1px solid @input-field-border-color;
       font-weight: 200;
-      color: #4d5060;
+      font-size: 1.1em;
+      color: @input-field-font-color;
       font-family: @body-font;
       transition: @transition;
-      font-size: .9em;
       outline-color: transparent;
       outline-style: none;
       @media (max-width: 600px) {
-        font-size: .9em;
+        font-size: 1em;
       }
 
       &::placeholder {
@@ -121,7 +122,7 @@
 
       &:hover {
         border-color: @theme-color;
-        background: #d9f6ff;
+        background: @input-field-hover-color;
 
         &::placeholder {
           color: @theme-color;
@@ -134,7 +135,7 @@
         box-shadow: unset;
 
         &::placeholder {
-          color: #d4d9e3;
+          color: @input-field-placeholder-color;
         }
       }
     }
@@ -183,7 +184,7 @@
   .login-signup {
     text-align: center;
     font-weight: 300;
-    font-size: 0.8em;
+    font-size: 1em;
     font-family: @body-font;
     margin-top: 20px;
 
