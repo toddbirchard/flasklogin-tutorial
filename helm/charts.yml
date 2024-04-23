@@ -1,0 +1,4 @@
+apiVersion: v2
+name: java-app-chart
+description: A Helm chart for deploying a Java application
+version: 0.1.0
