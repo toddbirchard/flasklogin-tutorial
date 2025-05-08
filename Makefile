@@ -76,18 +76,19 @@ lint: env
 
 .PHONY: clean
 clean:
-	find . -name '.coverage' -delete && \
-	find . -name '*.pyc' -delete && \
-	find . -name '__pycache__' -delete && \
-	find . -name 'poetry.lock' -delete && \
-	find . -name '*.log' -delete && \
-	find . -name '.DS_Store' -delete && \
-	find . -wholename '**/*.pyc' -delete && \
-	find . -wholename '**/*.html' -delete && \
-	find . -type d -wholename '__pycache__' -exec rm -rf {} + && \
-	find . -type d -wholename '.venv' -exec rm -rf {} + && \
-	find . -type d -wholename '.pytest_cache' -exec rm -rf {} + && \
-	find . -type d -wholename '**/.pytest_cache' -exec rm -rf {} + && \
-	find . -type d -wholename '**/*.log' -exec rm -rf {} + && \
-	find . -type d -wholename './.reports/*' -exec rm -rf {} + && \
-	find . -type d -wholename '**/.webassets-cache' -exec rm -rf {} +
+	find . -name 'poetry.lock' -delete
+	find . -name '.coverage' -delete
+	find . -name '*.pyc' -delete
+	find . -name '__pycache__' -delete
+	find . -name 'poetry.lock' -delete
+	find . -name '*.log' -delete
+	find . -name '.DS_Store' -delete
+	find . -wholename '**/*.pyc' -delete
+	find . -wholename '**/*.html' -delete
+	find . -type d -wholename '**/__pycache__/' -exec rm -rf {} \;
+	find . -type d -wholename '.venv' -exec rm -rf {} \;
+	find . -type d -wholename '.pytest_cache' -exec rm -rf {} \;
+	find . -type d -wholename '**/.pytest_cache' -exec rm -rf {} \;
+	find . -type d -wholename '**/*.log' -exec rm -rf {} \;
+	find . -type d -wholename './.reports/*' -exec rm -rf {} \;
+	find . -type d -wholename '**/.webassets-cache/' -exec rm -rf {} \;
