@@ -14,8 +14,8 @@ ENVIRONMENT = environ.get("ENVIRONMENT")
 proc_name = "flasklogin"
 wsgi_app = "wsgi:app"
 bind = "unix:flask.sock"
-threads = 4
-workers = 2
+threads = 1
+workers = 1
 
 if ENVIRONMENT == "development" or ENVIRONMENT is None:
     reload = True
