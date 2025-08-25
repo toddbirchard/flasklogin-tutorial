@@ -26,11 +26,23 @@ body {
       line-height: 1;
     }
 
-    p {
-      font-size: 1.5em;
-      font-weight: 300;
-      text-shadow: 0 0 3px #507b89;
+    .user-details {
+      width: 600px;
+      text-align: left;
+
+      p {
+        font-size: 1em;
+        font-weight: 300;
+        text-shadow: 0 0 3px #507b89;
+        line-height: 1;
+        margin: auto;
+
+        a {
+          display: inline;
+        }
+      }
     }
+
 
     a {
       font-size: 1em;
@@ -42,7 +54,7 @@ body {
       opacity: .7;
       transition: @transition;
 
-      &:hover{
+      &:hover {
         cursor: pointer;
         opacity: 1;
       }

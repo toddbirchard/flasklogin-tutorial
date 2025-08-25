@@ -9,7 +9,15 @@
   <h1>{{ body }}</h1>
 
   {% if current_user.is_authenticated %}
-    <p>Hi {{ current_user.name }}!</p>
+    <div class="user-details">
+      <p>Hi {{ current_user.name }}!</p>
+      <p><b>Email:</b> {{ current_user.email }}</p>
+      <p><b>Created on:</b> {{ current_user.created_on.strftime("%B %d, %Y") }}</p>
+      <p><b>Last seen:</b> {{ current_user.last_login.strftime("%B %d, %Y (%r)" ) }}</p>
+      {% if current_user.website %}
+        <p><b>Website:</b> <a href="{{ current_user.website }}" target="_blank" rel="noopener">{{ current_user.website }}</a></p>
+      {% endif %}
+    </div>
     <a href="{{ url_for('main_blueprint.logout') }}">Log out</a>
   {% endif %}
 

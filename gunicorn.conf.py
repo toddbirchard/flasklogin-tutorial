@@ -21,7 +21,7 @@ if ENVIRONMENT == "development" or ENVIRONMENT is None:
     reload = True
     workers = 1
     threads = 1
-    bind = ["127.0.0.1:8000"]
+    bind = ["127.0.0.1:8001"]
 elif ENVIRONMENT == "production":
     daemon = True
     accesslog = "/var/log/flasklogin/access.log"
